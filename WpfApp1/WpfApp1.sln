@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{8169BB8B-5B6A-4730-9E19-243C4D431AB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp", "ToDoApp\ToDoApp.csproj", "{369DFA9E-9103-4150-ABA1-B4D8C1DE7A8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GOF", "GOF\GOF.csproj", "{4AE51177-8B9A-43F2-97BA-B9CAD78CB318}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8169BB8B-5B6A-4730-9E19-243C4D431AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8169BB8B-5B6A-4730-9E19-243C4D431AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8169BB8B-5B6A-4730-9E19-243C4D431AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{369DFA9E-9103-4150-ABA1-B4D8C1DE7A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{369DFA9E-9103-4150-ABA1-B4D8C1DE7A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{369DFA9E-9103-4150-ABA1-B4D8C1DE7A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{369DFA9E-9103-4150-ABA1-B4D8C1DE7A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE51177-8B9A-43F2-97BA-B9CAD78CB318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE51177-8B9A-43F2-97BA-B9CAD78CB318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE51177-8B9A-43F2-97BA-B9CAD78CB318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE51177-8B9A-43F2-97BA-B9CAD78CB318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,6 +22,7 @@
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
         </Style>
         
+<<<<<<< HEAD
         <Style x:Key="txtBlkStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontStyle" Value="Oblique"/>
@@ -62,6 +63,30 @@
             <TextBlock Style="{StaticResource txtBlkStyle}" Text="尺寸厚度" Grid.Column="0" Grid.Row="6" ></TextBlock>
             <TextBlock Style="{StaticResource txtBlkStyle}" Text="尺寸宽度" Grid.Column="0" Grid.Row="7" ></TextBlock>
 
+=======
+    </Window.Resources>
+    <Grid>
+        
+        
+        <StackPanel Orientation="Vertical" >
+            <lvc:CartesianChart Height="300"    Background="Azure" LegendLocation="Top">
+                <!--添加视觉元素-->
+                <lvc:CartesianChart.VisualElements>
+                    <lvc:VisualElement Y="9" X="1">
+                        <lvc:VisualElement.UIElement>
+                            <TextBlock Foreground="Green" FontSize="34">
+                                hello
+                            </TextBlock>
+                        </lvc:VisualElement.UIElement>
+                    </lvc:VisualElement>
+                    
+                </lvc:CartesianChart.VisualElements>
+                <!-- 定义为折线图-->
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Values="1,2,5,9,19" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
+                    <lvc:LineSeries Values="4,6,9,12,29"/>
+                    
+>>>>>>> f5ed7dc5c1b6b9fc90a782a344a15abec1f5ed16
 
 
             <lvc:CartesianChart Grid.Column="1" Grid.Row="0" Height="300"    Background="Azure" LegendLocation="Top" ScrollMode="XY">
@@ -214,6 +239,14 @@
                     <lvc:Axis Title="温度"></lvc:Axis>
                 </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
+<<<<<<< HEAD
+=======
+
+            <Button Content="hello" VerticalAlignment="Bottom">
+
+            </Button>
+        </StackPanel>
+>>>>>>> f5ed7dc5c1b6b9fc90a782a344a15abec1f5ed16
 
         </Grid>
         
