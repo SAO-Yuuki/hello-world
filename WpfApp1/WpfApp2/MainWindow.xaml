@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp2"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="540" Width="960" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+        Title="MainWindow" Height="600"  Width="800" WindowState="Maximized" WindowStyle="SingleBorderWindow">
     <Window.Resources>
         <Style x:Key="ctlDftStyle" TargetType="Control">
             <Setter Property="Background" Value="Yellow"></Setter>
@@ -21,10 +21,66 @@
             <Setter Property="Margin" Value="5"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
         </Style>
+        
+        <Style x:Key="txtBlkStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontStyle" Value="Oblique"/>
+            <!--<Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>-->
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Background" Value="green"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="3,5,3,5"></Setter>
+        </Style>
+        
     </Window.Resources>
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <lvc:CartesianChart Height="300"    Background="Azure" LegendLocation="Top">
+        <Grid Height="Auto"  Width="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="计划号" Grid.Column="0" Grid.Row="0" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="孔型" Grid.Column="0" Grid.Row="1" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="坯型" Grid.Column="0" Grid.Row="2" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="剪切温度" Grid.Column="0" Grid.Row="3" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="剪切定尺" Grid.Column="0" Grid.Row="4" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="加热工艺" Grid.Column="0" Grid.Row="5" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="尺寸厚度" Grid.Column="0" Grid.Row="6" ></TextBlock>
+            <TextBlock Style="{StaticResource txtBlkStyle}" Text="尺寸宽度" Grid.Column="0" Grid.Row="7" ></TextBlock>
+
+
+
+            <lvc:CartesianChart Grid.Column="1" Grid.Row="0" Height="300"    Background="Azure" LegendLocation="Top" ScrollMode="XY">
+                <lvc:CartesianChart.Series>
+                    <lvc:ColumnSeries Values="4,6,9,12,29"></lvc:ColumnSeries>
+                </lvc:CartesianChart.Series>
+            </lvc:CartesianChart>
+            <lvc:CartesianChart Grid.Column="1" Grid.Row="1" Height="300"    Background="Azure" LegendLocation="Top" ScrollMode="XY">
+                <lvc:CartesianChart.Series>
+                    <lvc:ColumnSeries Values="4,6,9,12,29"></lvc:ColumnSeries>
+                </lvc:CartesianChart.Series>
+            </lvc:CartesianChart>
+            <lvc:CartesianChart Grid.Column="1" Grid.Row="2" Height="300"    Background="Azure" LegendLocation="Top" ScrollMode="XY">
+                <lvc:CartesianChart.Series>
+                    <lvc:ColumnSeries Values="4,6,9,12,29"></lvc:ColumnSeries>
+                </lvc:CartesianChart.Series>
+            </lvc:CartesianChart>
+
+            <lvc:CartesianChart Grid.Row="3" Grid.Column="1"   Background="Azure" LegendLocation="Top">
                 <!--添加视觉元素-->
                 <lvc:CartesianChart.VisualElements>
                     <lvc:VisualElement Y="9" X="1">
@@ -34,13 +90,13 @@
                             </TextBlock>
                         </lvc:VisualElement.UIElement>
                     </lvc:VisualElement>
-                    
+
                 </lvc:CartesianChart.VisualElements>
                 <!-- 定义为折线图-->
                 <lvc:CartesianChart.Series>
                     <lvc:LineSeries Values="1,2,5,9,19" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
                     <lvc:LineSeries Values="4,6,9,12,29"/>
-                    
+
 
 
                 </lvc:CartesianChart.Series>
@@ -52,34 +108,115 @@
                     <lvc:Axis Title="温度"></lvc:Axis>
                 </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
-            <lvc:CartesianChart>
+
+            <lvc:CartesianChart Grid.Row="4" Grid.Column="1"   Background="Azure" LegendLocation="Top">
+                <!--添加视觉元素-->
+                <lvc:CartesianChart.VisualElements>
+                    <lvc:VisualElement Y="9" X="1">
+                        <lvc:VisualElement.UIElement>
+                            <TextBlock Foreground="Green" FontSize="34">
+                                hello
+                            </TextBlock>
+                        </lvc:VisualElement.UIElement>
+                    </lvc:VisualElement>
+
+                </lvc:CartesianChart.VisualElements>
+                <!-- 定义为折线图-->
                 <lvc:CartesianChart.Series>
-                    <lvc:ScatterSeries Values="1,2,5,900,600"></lvc:ScatterSeries>
+                    <lvc:LineSeries Values="1,2,5,9,19" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
+                    <lvc:LineSeries Values="4,6,9,12,29"/>
+
+
+
                 </lvc:CartesianChart.Series>
-            </lvc:CartesianChart>
-            <lvc:CartesianChart>
-                <lvc:CartesianChart.Series>
-                    <lvc:CandleSeries Values="1,2,5,900,600"></lvc:CandleSeries>
-                </lvc:CartesianChart.Series>
+                <!--定义纵横坐标名称-->
+                <lvc:CartesianChart.AxisX >
+                    <lvc:Axis Title="时间"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="温度"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
 
-            <lvc:CartesianChart>
-                <lvc:CartesianChart.Series>
-                    <lvc:OhlcSeries Values="1,2,5,900,600"></lvc:OhlcSeries>
-                </lvc:CartesianChart.Series>
-            </lvc:CartesianChart>
-            <lvc:CartesianChart>
-                <lvc:CartesianChart.Series>
-                    <lvc:ColumnSeries Values="200,300,5,900,600"></lvc:ColumnSeries>
-                </lvc:CartesianChart.Series>
-            </lvc:CartesianChart>
-            <lvc:CartesianChart>
-                <lvc:CartesianChart.Series>
-                    <lvc:OhlcSeries Values="1,2,5,900,600"></lvc:OhlcSeries>
-                </lvc:CartesianChart.Series>
-            </lvc:CartesianChart>
-        </StackPanel>
+            <lvc:CartesianChart Grid.Row="5" Grid.Column="1"   Background="Azure" LegendLocation="Top">
+                <!--添加视觉元素-->
+                <lvc:CartesianChart.VisualElements>
+                    <lvc:VisualElement Y="9" X="1">
+                        <lvc:VisualElement.UIElement>
+                            <TextBlock Foreground="Green" FontSize="34">
+                                hello
+                            </TextBlock>
+                        </lvc:VisualElement.UIElement>
+                    </lvc:VisualElement>
 
+                </lvc:CartesianChart.VisualElements>
+                <!-- 定义为折线图-->
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Values="1,2,5,9,19" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
+                    <lvc:LineSeries Values="4,6,9,12,29"/>
+
+
+
+                </lvc:CartesianChart.Series>
+                <!--定义纵横坐标名称-->
+                <lvc:CartesianChart.AxisX >
+                    <lvc:Axis Title="时间"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="温度"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+
+            <lvc:CartesianChart Grid.Row="6" Grid.Column="1"   Background="Azure" LegendLocation="Top">
+                <!--添加视觉元素-->
+                <lvc:CartesianChart.VisualElements>
+                    <lvc:VisualElement Y="9" X="1">
+                        <lvc:VisualElement.UIElement>
+                            <TextBlock Foreground="Green" FontSize="34">
+                                hello
+                            </TextBlock>
+                        </lvc:VisualElement.UIElement>
+                    </lvc:VisualElement>
+
+                </lvc:CartesianChart.VisualElements>
+                <!-- 定义为折线图-->
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Values="1,2,5,9,19" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
+                    <lvc:LineSeries Values="4,6,9,12,29"/>
+
+
+
+                </lvc:CartesianChart.Series>
+                <!--定义纵横坐标名称-->
+                <lvc:CartesianChart.AxisX >
+                    <lvc:Axis Title="时间"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="温度"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+
+            <lvc:CartesianChart Grid.Row="7" Grid.Column="1"   Background="Azure" LegendLocation="Top">
+
+                <!-- 定义为折线图-->
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Values="1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,1,2,5,9,19,"  LineSmoothness="0"  Foreground="Green" PointForeground="Pink"/>
+
+
+
+
+                </lvc:CartesianChart.Series>
+                <!--定义纵横坐标名称-->
+                <lvc:CartesianChart.AxisX >
+                    <lvc:Axis Title="时间" ></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="温度"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+
+        </Grid>
+        
     </Grid>
     
 </Window>
