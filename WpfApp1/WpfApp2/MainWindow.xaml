@@ -21,9 +21,12 @@
             <Setter Property="Margin" Value="5"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
         </Style>
+        
     </Window.Resources>
     <Grid>
-        <StackPanel Orientation="Vertical">
+        
+        
+        <StackPanel Orientation="Vertical" >
             <lvc:CartesianChart Height="300"    Background="Azure" LegendLocation="Top">
                 <!--添加视觉元素-->
                 <lvc:CartesianChart.VisualElements>
@@ -78,6 +81,10 @@
                     <lvc:OhlcSeries Values="1,2,5,900,600"></lvc:OhlcSeries>
                 </lvc:CartesianChart.Series>
             </lvc:CartesianChart>
+
+            <Button Content="hello" VerticalAlignment="Bottom">
+
+            </Button>
         </StackPanel>
 
     </Grid>
