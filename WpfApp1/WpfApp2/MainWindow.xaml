@@ -102,11 +102,8 @@
 
                 <!-- 定义为折线图-->
                 <lvc:CartesianChart.Series>
-                    <lvc:LineSeries Values="1,2,5,9,19" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
+                    <lvc:LineSeries Values="{Binding }" DataLabels="True" LineSmoothness="0" Stroke="Blue" Fill="Yellow" PointGeometrySize="20" Foreground="Green" PointForeground="Pink" StrokeDashArray="10"/>
                     <lvc:LineSeries Values="4,6,9,12,29"/>
-
-
-
                 </lvc:CartesianChart.Series>
                 <!--定义纵横坐标名称-->
                 <lvc:CartesianChart.AxisX >
